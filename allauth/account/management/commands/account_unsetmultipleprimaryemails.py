@@ -33,10 +33,9 @@ class Command(BaseCommand):
                 "WARNING: Multiple primary without a user.email match for"
                 "user pk %s; (tried: %s, using: %s)") % (
                     user.pk,
-                    ", ".join([
-                        email_address.email
+                    ", ".join(email_address.email
                         for email_address
-                        in primary_email_addresses]),
+                        in primary_email_addresses),
                     primary_email_address)
 
         primary_email_addresses.exclude(
