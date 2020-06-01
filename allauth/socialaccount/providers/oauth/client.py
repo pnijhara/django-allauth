@@ -177,7 +177,7 @@ class OAuth(object):
                 _('No access token saved for "%s".')
                 % get_token_prefix(self.request_token_url))
 
-    def query(self, url, method="GET", params=dict(), headers=dict()):
+    def query(self, url, method="GET", params={}, headers={}):
         """
         Request a API endpoint at ``url`` with ``params`` being either the
         POST or GET data.
